@@ -13,6 +13,7 @@ export default async function ProfilePageServer({ params }) {
     const { username } = await params;
     const isVisit = session.username === username;
     const user = await getProfileByUsername(username);
+    console.log(user)
     if (!user) return notFound();
     const posts = await getPostsByAuthor(user._id);
     const following = await isFollowing(user._id);
