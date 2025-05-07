@@ -43,7 +43,7 @@ export default async function WhoToFollow() {
                                     </p>
                                 </div>
                             </div>
-                            <FollowButton userId={user._id.toString()} />
+                            <FollowButton userId={user?._id.toString()} />
                         </div>
                     ))}
                 </div>
